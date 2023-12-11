@@ -13,8 +13,7 @@ jobs:
         run: npm run build
       - name: Adjust browser
         run: |
-          npm run build
-          cd dist/docchi--presidential-election-map
+          cd dist/test-de
           rm *.txt
           cd browser
           mv * ..
