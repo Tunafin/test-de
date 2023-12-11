@@ -12,15 +12,15 @@ jobs:
       - name: Build
         run: npm run build
       - name: Adjust browser
-        run: 
-              npm run build
-              cd dist/docchi--presidential-election-map
-              rm *.txt
-              cd browser
-              mv * ..
-              cd ..
-              rm -rf browser
-              cd ../..
+        run: |
+          npm run build
+          cd dist/docchi--presidential-election-map
+          rm *.txt
+          cd browser
+          mv * ..
+          cd ..
+          rm -rf browser
+          cd ../..
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
